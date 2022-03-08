@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 7</title>
+</head>
+
+<body>
+
+    <script>
+        class Gempa {
+            constructor(lokasi, skala) {
+                this.loc = lokasi;
+                this.scale = skala;
+            }
+
+            dampak() {
+                let i = this.scale;
+                if (i >= 0 && i <= 2) {
+                    this.damage = "Dampaknya tidak terasa";
+                } else if (i > 2 && i <= 4) {
+                    this.damage = "Dampaknya bangunan retak - retak";
+                } else if (i > 4 && i <= 6) {
+                    this.damage = "Dampaknya bangunan roboh";
+                } else if (i > 6) {
+                    this.damage = "Dampaknya bangunan roboh dan berpotensi tsunami";
+                }
+                document.write(`Lokasi: ${this.loc}
+                <br />Skala: ${this.scale}
+                <br />Dampak: ${this.damage}
+                <hr />`);
+            }
+
+        }
+
+        lokasi = [
+            new Gempa('Otogakure', 1),
+            new Gempa('Atlantis', 8),
+            new Gempa('Jura Tempest', 2),
+            new Gempa('Rock Bottom', 5),
+            new Gempa('Bikini Bottom', 4),
+            new Gempa('Aincrad', 7),
+            new Gempa('Isekai', 6),
+            new Gempa('Wakanda', 3),
+            new Gempa('Wano', 3),
+            new Gempa('Spade Kingdom', 9)
+        ]
+
+        for (i = 0; i < lokasi.length; i++) {
+            lokasi[i].dampak();
+        }
+    </script>
+
+</body>
+
+</html>
