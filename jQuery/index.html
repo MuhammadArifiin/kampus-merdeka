@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Latihan 5 Jquery - Event</title>
+    <script src="jquery.js"></script>
+    <script>
+        $("document").ready(function () {
+            $("div.kuda").click(function () {
+                $(this).css({
+                    background: "url('https://www.fesliyanstudios.com/soundeffectscatpics/262.jpg')"
+                });
+                $('.sound1').get(0).play();
+            });
+            $("div.kuda").mouseout(function () {
+                $(this).css({
+                    background: "greenyellow"
+                });
+            });
+            $("div.kambing").click(function () {
+                $(this).css({
+                    background: "url('https://www.fesliyanstudios.com/soundeffectscatpics/263.jpg')"
+                });
+                $('.sound2').get(0).play();
+            });
+            $("div.kambing").mouseout(function () {
+                $(this).css({
+                    background: "greenyellow"
+                });
+            });
+            $("div.babi").click(function () {
+                $(this).css({
+                    background: "url('https://www.fesliyanstudios.com/soundeffectscatpics/261.jpg')"
+                });
+                $('.sound3').get(0).play();
+            });
+            $("div.babi").mouseout(function () {
+                $(this).css({
+                    background: "greenyellow"
+                });
+            });
+            $("div.sapi").click(function () {
+                $(this).css({
+                    background: "url('https://www.fesliyanstudios.com/soundeffectscatpics/264.jpg')"
+                });
+                $('.sound4').get(0).play();
+            });
+            $("div.sapi").mouseout(function () {
+                $(this).css({
+                    background: "greenyellow"
+                });
+
+            });
+        });
+    </script>
+    <style type="text/css">
+        div {
+            background: greenyellow;
+            height: 100px;
+            width: 100px;
+            float: left;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Dekati pada setiap kotak untuk menampilkan hewan</p>
+    <div class="kuda">Ini Hewan Kuda</div>
+    <div class="kambing">Ini Hewan Kambing</div>
+    <div class="babi">Ini Hewan Babi</div>
+    <div class="sapi">ini Hewan Sapi</div>
+    <audio class="sound1" src="https://www.fesliyanstudios.com/play-mp3/6589"></audio>
+    <audio class="sound2" src="https://www.fesliyanstudios.com/play-mp3/6539"></audio>
+    <audio class="sound3" src="https://www.fesliyanstudios.com/play-mp3/6607"></audio>
+    <audio class="sound4" src="https://www.fesliyanstudios.com/play-mp3/6518"></audio>
+</body>
+
+</html>
